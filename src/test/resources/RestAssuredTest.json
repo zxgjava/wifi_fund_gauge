@@ -1,0 +1,23 @@
+{
+    "should_return_json_str_and_check_code_name_by_get" : {
+    	"username" : "zxg001",
+    	"password" : "001"
+    },
+    "should_return_json_str_and_check_code_name_by_post" : {
+    	"username" : "zxg002",
+    	"password" : "002"
+    },
+    "should_return_json_str_and_check_code_name_by_put" : {
+    	"username" : "zxg003",
+    	"password" : "003"
+    },
+    "should_return_json_str_and_check_result_by_delete" : {
+    	"username" : "zxg004",
+    	"password" : "004"
+    },
+    "should_return_json_str_and_check_result_by_get_with_headers" : {
+    	"header1" : "header1_val",
+    	"header2" : "header2_val"
+    }
+    
+}

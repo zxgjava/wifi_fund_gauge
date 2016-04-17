@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="wifi_fund_suite">
+	<test verbose="2" name="wifi_fund_rest_assured_test_first">
+		<!-- 参数定义的方法 -->
+		<parameter name="header1" value="header1_val" />
+		<parameter name="header2" value="header2_val" />
+		<!-- groups的用法，前提是需要存在classes的组，否则所有方法不被运行 -->
+		<groups>
+			<!-- 定义组中组的方法 -->
+			<define name="groups_name">
+				<include name="group1" />
+				<include name="group2" />
+			</define>
+
+			<run>
+				<!-- 此处用组名来区别 -->
+				<inclue name="groups_name" />
+				<exclue name="groups_name" />
+			</run>
+		</groups>
+		<classes>
+			<class name="cn.agilean.wifi.RestAssuredTest">
+				<methods>
+					<include name="should_return_json_str_and_check_code_name_by_get" />
+					<include name="should_return_json_str_and_check_code_name_by_get_wifi" />
+					<include name="should_return_json_str_and_check_code_name_by_post" />
+					<include name="should_return_json_str_and_check_code_name_by_put" />
+					<include name="should_return_json_str_and_check_result_by_delete" />
+					<include name="should_return_json_str_and_check_result_by_get_with_headers" />
+					<include name="should_return_status_200" />
+					<include name="should_return_status_401" />
+					<include name="should_return_json_str_and_check_result_by_get_with_headers_param" />
+				</methods>
+			</class> <!-- cn.agilean.wifi.RestAssuredTest -->
+		</classes>
+	</test> 
+	<test verbose="2" name="wifi_fund_rest_assured_test_second">
+		<!-- 参数定义的方法 -->
+		<parameter name="header1" value="header1_val" />
+		<parameter name="header2" value="header2_val" />
+		<!-- groups的用法，前提是需要存在classes的组，否则所有方法不被运行 -->
+		<groups>
+			<!-- 定义组中组的方法 -->
+			<define name="groups_name">
+				<include name="group1" />
+				<include name="group2" />
+			</define>
+
+			<run>
+				<!-- 此处用组名来区别 -->
+				<inclue name="groups_name" />
+				<exclue name="groups_name" />
+			</run>
+		</groups>
+		<classes>
+			<class name="cn.agilean.wifi.RestAssuredTest">
+				<methods>
+					<include name="should_return_json_str_and_check_code_name_by_get" />
+					<include name="should_return_json_str_and_check_code_name_by_get_wifi" />
+					<include name="should_return_json_str_and_check_code_name_by_post" />
+					<include name="should_return_json_str_and_check_code_name_by_put" />
+					<include name="should_return_json_str_and_check_result_by_delete" />
+					<include name="should_return_json_str_and_check_result_by_get_with_headers" />
+					<include name="should_return_status_200" />
+					<include name="should_return_status_401" />
+					<include name="should_return_json_str_and_check_result_by_get_with_headers_param" />
+				</methods>
+			</class> <!-- cn.agilean.wifi.RestAssuredTest -->
+		</classes>
+	</test>
+</suite> 
