@@ -22,6 +22,18 @@ public class StepImplementation {
         Gauge.writeMessage("vowelString，print message");
     }
 
+    @Step("print vowels <word>")
+    public void printVowels(String word) {
+    	assertEquals("aeiou", word);
+    	Gauge.writeMessage("in wowels word:"+word);
+    }
+    
+    @Step("print vowels <word>")
+    public void printVowelsTest(String word) {
+    	assertEquals("aeiou", word);
+    	Gauge.writeMessage("in wowels word test:"+word);
+    }
+    
     @Step("The word <word> has <expectedCount> vowels.")
     public void verifyVowelsCountInWord(String word, int expectedCount) {
         int actualCount = countVowels(word);
@@ -37,6 +49,16 @@ public class StepImplementation {
 
             assertEquals(expectedCount, actualCount);
         }
+    }
+    
+    @Step({"Create a user <username>", "Create another user <username>"})
+    public void helloWorld(String role) {
+        Gauge.writeMessage("role:"+role);
+    }
+    
+    @Step({"创建一个用户 <username>", "创建另一个用户 <username>"})
+    public void helloWorldTest(String role) {
+        Gauge.writeMessage("role:"+role);
     }
 
     private int countVowels(String word) {

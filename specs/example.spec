@@ -10,6 +10,10 @@ To execute this specification, run
 
 * Vowels in English language are "aeiou".
 
+print vowels
+---------------------------
+* print vowels "aeiou"
+
 Vowel counts in single word
 ---------------------------
 
@@ -33,3 +37,18 @@ Here's a step that takes a table
      |Snap  |1          |
      |GoCD  |1          |
      |Rhythm|0          |
+
+test an spec scene
+--------------------
+* Create a user "prateek"
+* Create another user "vishnu"
+
+test 中文
+--------------------
+* 创建一个用户 "prateek"
+* 创建另一个用户 "vishnu"
+
+
+
+
+
